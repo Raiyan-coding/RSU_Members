@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>All Members</title>
+  <style>
+    /* Global Styles */
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(45deg, #2e00fa, #005a3f); /* Cool gradient color */
+
+      color: #333;  /* Dark text for readability */
+    }
+  
+    h1 {
+      text-align: center;
+      color: #ebe0ff;
+      font-family: 'Pangolin', sans-serif;  /* Using the Pangolin font */
+      font-size: 60px;
+      margin-top: 50px;
+      animation: fadeIn 2s ease-out;
+    }
+
+  
+    /* Search Bar Styles */
+    .search-container {
+      text-align: center;
+      margin-bottom: 20px;
+
+    }
+  
+    .search-bar {
+      width: 300px;
+      padding: 12px;
+      border: 2px solid #4CAF50;
+      border-radius: 25px;
+      background-color: #ffffff;
+      color: #3d012e;
+      font-size: 18px;
+      outline: none;
+      box-shadow: 0 10 10px rgba(76, 175, 80, 0.3);
+      transition: background-color 0.3s ease, border-color 0.3s ease;
+    }
+  
+    .search-bar:focus {
+      background-color: #b8fce7;
+      border-color: #ff00b3;
+    }
+  
+    /* Table Styles */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 30px;
+      animation: slideIn 1.5s ease-out;
+    }
+  
+    table, th, td {
+      border: 1px solid #6f6a75;
+    }
+  
+    th, td {
+      padding: 16px;
+      text-align: center;
+      font-size: 16px;
+    }
+  
+    th {
+      background: linear-gradient(45deg, #00c7ac, #317205); /* Cool gradient color */
+      color: white;
+      font-weight: bold;
+    }
+  
+    td {
+      background-color: #fefcff;
+      color: #000000;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+  
+    td:hover {
+      background-color: #f1f1f1;
+      color: #ff008c;
+    }
+  
+    /* No Results Text */
+    .no-results {
+      text-align: center;
+      color: red;
+      font-size: 20px;
+      font-weight: bold;
+    }
+  
+    /* Animations */
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  
+    @keyframes slideIn {
+      0% {
+        opacity: 0;
+        transform: translateX(-100%);
+      }
+      100% {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+  
+    /* Button Styles */
+    .see-all-btn {
+      display: block;
+      width: 220px;
+      padding: 12px;
+      background-color: #4CAF50;
+      color: white;
+      text-align: center;
+      border-radius: 30px;
+      font-size: 18px;
+      margin: 30px auto;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+      animation: fadeIn 2s ease-out;
+    }
+  
+    .see-all-btn:hover {
+      background-color: #45a049;
+      transform: translateY(-5px);
+    }
+  
+    .see-all-btn:active {
+      background-color: #388e3c;
+      transform: translateY(1px);
+    }
+  </style>
+  
+  <link href="https://fonts.googleapis.com/css2?family=Pangolin&display=swap" rel="stylesheet">
+
+
+</head>
+<body>
+  <h1>All Members</h1>
+
+  <div class="search-container">
+    <input
+      type="text"
+      id="searchBar"
+      class="search-bar"
+      placeholder="Search by name..."
+      oninput="filterTable()"
+    />
+  </div>
+  <table id="membersTable">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Position</th>
+        <th>Joining Date</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Md Raiyan Islam</td>
+        <td>Envoy</td>
+        <td>19/1/2025</tr>
+      </tr>
+      <tr>
+        <td>Chinmoy Paul</td>
+        <td>Sentinent</td>
+        <td>19/1/2025</td>
+      </tr>
+  
+      <!-- Coordinators -->
+      <tr>
+        <td>[Debate Coordinator Name]</td>
+        <td>Debate Division Coordinator</td>
+        <td>2025-01-03</td>
+      </tr>
+      <tr>
+        <td>[Social Care Coordinator Name]</td>
+        <td>Social Care Division Coordinator</td>
+        <td>2025-01-04</td>
+      </tr>
+      <tr>
+        <td>[Co-Curricular Coordinator Name]</td>
+        <td>Co-Curricular Division Coordinator</td>
+        <td>2025-01-05</td>
+      </tr>
+      <tr>
+        <td>Sourav Das</td>
+        <td>eSports Division Coordinator</td>
+        <td>2025-01-06</td>
+      </tr>
+      <tr>
+        <td>[Debate Coordinator Name]</td>
+        <td>Education Division Coordinator</td>
+        <td>2025-01-03</td>
+      </tr>
+  
+      <!-- Mentors -->
+      <tr>
+        <td>[Mentor Name]</td>
+        <td>Mentor (Mathematics)</td>
+        <td>2025-01-07</td>
+      </tr>
+      <tr>
+        <td>[Mentor Name]</td>
+        <td>Mentor (Physics)</td>
+        <td>2025-01-08</td>
+      </tr>
+      <tr>
+        <td>[Mentor Name]</td>
+        <td>Mentor (Chemistry)</td>
+        <td>2025-01-09</td>
+      </tr>
+      <tr>
+        <td>[Mentor Name]</td>
+        <td>Mentor (Biology)</td>
+        <td>2025-01-10</td>
+      </tr>
+      <tr>
+        <td>[Mentor Name]</td>
+        <td>Mentor (History - BD)</td>
+        <td>2025-01-11</td>
+      </tr>
+      <tr>
+        <td>[Mentor Name]</td>
+        <td>Mentor (History - World)</td>
+        <td>2025-01-12</td>
+      </tr>
+      <tr>
+        <td>[Mentor Name]</td>
+        <td>Mentor (Bangla Literature)</td>
+        <td>2025-01-13</td>
+      </tr>
+      <tr>
+        <td>[Mentor Name]</td>
+        <td>Mentor (English)</td>
+        <td>2025-01-14</td>
+      </tr>
+      <tr>
+        <td>[Mentor Name]</td>
+        <td>Mentor (AI & ICT)</td>
+        <td>2025-01-15</td>
+      </tr>
+      <tr>
+        <td>[Mentor Name]</td>
+        <td>Mentor (Finance)</td>
+        <td>2025-01-16</td>
+      </tr>
+      <tr>
+        <td>[Mentor Name]</td>
+        <td>Mentor (Astrology)</td>
+        <td>2025-01-17</td>
+      </tr>
+      <tr>
+        <td>[Mentor Name]</td>
+        <td>Mentor (Philosophy)</td>
+        <td>2025-01-18</td>
+      </tr>
+      <tr>
+        <td>[Mentor Name]</td>
+        <td>Mentor (Politics)</td>
+        <td>2025-01-19</td>
+      </tr>
+  
+      <!-- members  -->
+      <tr>
+        <td>[Mentor Name]</td>
+        <td>Member</td>
+        <td>2025-01-19</td>
+      </tr>
+  
+    </tbody>
+  </table>
+  
+  <script>
+    function filterTable() {
+      const searchInput = document.getElementById("searchBar").value.toLowerCase();
+      const table = document.getElementById("membersTable");
+      const rows = table.getElementsByTagName("tr");
+      let found = false;
+
+      for (let i = 1; i < rows.length; i++) {
+        const cells = rows[i].getElementsByTagName("td");
+        let rowContainsSearch = false;
+
+        for (let j = 0; j < cells.length; j++) {
+          if (cells[j].textContent.toLowerCase().includes(searchInput)) {
+            rowContainsSearch = true;
+            break;
+          }
+        }
+
+        rows[i].style.display = rowContainsSearch ? "" : "none";
+        if (rowContainsSearch) found = true;
+      }
+
+      if (!found) {
+        const noResultsRow = document.createElement("tr");
+        noResultsRow.className = "no-results";
+        noResultsRow.innerHTML = `<td colspan="3">No results found</td>`;
+        table.tBodies[0].appendChild(noResultsRow);
+      }
+    }
+  </script>
+</body>
+</html>
